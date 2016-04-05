@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'glober_regularregular';
+    src: url('glober_regular-webfont.eot');
+    src: url('glober_regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('glober_regular-webfont.woff2') format('woff2'),
+    url('glober_regular-webfont.woff') format('woff'),
+    url('glober_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'globersemibold_free';
+    src: url('glober_semibold-webfont.eot');
+    src: url('glober_semibold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('glober_semibold-webfont.woff2') format('woff2'),
+    url('glober_semibold-webfont.woff') format('woff'),
+    url('glober_semibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'globerthin_free';
+    src: url('glober_thin-webfont.eot');
+    src: url('glober_thin-webfont.eot?#iefix') format('embedded-opentype'),
+    url('glober_thin-webfont.woff2') format('woff2'),
+    url('glober_thin-webfont.woff') format('woff'),
+    url('glober_thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'globerbook';
+    src: url('glober_book-webfont.eot');
+    src: url('glober_book-webfont.eot?#iefix') format('embedded-opentype'),
+    url('glober_book-webfont.woff2') format('woff2'),
+    url('glober_book-webfont.woff') format('woff'),
+    url('glober_book-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'globerlight';
+    src: url('glober_light-webfont.eot');
+    src: url('glober_light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('glober_light-webfont.woff2') format('woff2'),
+    url('glober_light-webfont.woff') format('woff'),
+    url('glober_light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}

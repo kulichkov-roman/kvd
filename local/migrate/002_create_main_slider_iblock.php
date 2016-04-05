@@ -55,11 +55,6 @@ class CreateHeroSliderIBlockMigration extends AbstractIBlockMigration
 					'DESCRIPTION_TYPE' => 'text',
 					'GROUP_ID'         => array('2' => 'R'),
 					'VERSION'          => 2,
-					'FIELDS'           => array(
-						'PREVIEW_PICTURE'  => array(
-							'IS_REQUIRED' => 'Y',
-						),
-					),
 				)
 			);
 

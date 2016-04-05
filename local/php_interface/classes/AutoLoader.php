@@ -13,7 +13,7 @@ namespace Momentum;
  */
 class AutoLoader
 {
-	const PROJECT_NAMESPACE = 'Momentum';
+	const PROJECT_NAMESPACE = 'kvd';
 
 	static private $recursiveSearch = true;
 

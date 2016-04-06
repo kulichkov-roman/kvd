@@ -8,6 +8,7 @@
 			'sliderMainIBlockId' => 1,
 			'productsBlockId'    => 2,
 			'projectsBlockId'    => 3,
+			'feedbackBlockId'    => 4,
 			'sliderMainPlugId'   => 3,
 		)
 	)
@@ -25,6 +26,20 @@ itc\Resizer::addPreset('sliderMain', array(
 		'mode' => 'crop',
 		'width' => '1920',
 		'height' => '620',
+		'type' => 'jpg'
+	)
+);
+itc\Resizer::addPreset('projectsPreview', array(
+		'mode' => 'crop',
+		'width' => '344',
+		'height' => '344',
+		'type' => 'jpg'
+	)
+);
+itc\Resizer::addPreset('projectsDetail', array(
+		'mode' => 'width',
+		'width' => '1024',
+		'height' => null,
 		'type' => 'jpg'
 	)
 );

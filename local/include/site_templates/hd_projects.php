@@ -1,61 +1,64 @@
-<section class="projects-section">
-			<div id="projects" class="wrap">
-				<h2>РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</h2>
-				<div class="projects-block">
-					<div class="projects-item item-1">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/img4.jpg" class="fancybox" data-fancybox-group="gallery">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/img4.jpg" alt="">
-							<span class="look"><span class="look-body">Посмотреть</span></span>
-						</a>
-					</div>
-					<div class="projects-item item-2">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/img5.jpg" class="fancybox" data-fancybox-group="gallery">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/img5.jpg" alt="">
-							<span class="look"><span class="look-body">Посмотреть</span></span>
-						</a>
-					</div>
-					<div class="projects-item item-3">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/img6.jpg" class="fancybox" data-fancybox-group="gallery">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/img6.jpg" alt="">
-							<span class="look"><span class="look-body">Посмотреть</span></span>
-						</a>
-					</div>
-					<div class="projects-item item-4">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/img7.jpg" class="fancybox" data-fancybox-group="gallery">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/img7.jpg" alt="">
-							<span class="look"><span class="look-body">Посмотреть</span></span>
-						</a>
-					</div>
-					<div class="projects-item item-5">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/img8.jpg" class="fancybox" data-fancybox-group="gallery">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/img8.jpg" alt="">
-							<span class="look"><span class="look-body">Посмотреть</span></span>
-						</a>
-					</div>
-					<div class="projects-item item-6">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/img9.jpg" class="fancybox" data-fancybox-group="gallery">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/img9.jpg" alt="">
-							<span class="look"><span class="look-body">Посмотреть</span></span>
-						</a>
-					</div>
-					<div class="projects-item item-7">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/img10.jpg" class="fancybox" data-fancybox-group="gallery">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/img10.jpg" alt="">
-							<span class="look"><span class="look-body">Посмотреть</span></span>
-						</a>
-					</div>
-					<div class="projects-item item-8">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/img11.jpg" class="fancybox" data-fancybox-group="gallery">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/img11.jpg" alt="">
-							<span class="look"><span class="look-body">Посмотреть</span></span>
-						</a>
-					</div>
-					<div class="projects-item item-9">
-						<a href="<?=SITE_TEMPLATE_PATH?>/images/img12.jpg" class="fancybox" data-fancybox-group="gallery">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/img12.jpg" alt="">
-							<span class="look"><span class="look-body">Посмотреть</span></span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
+<?$APPLICATION->IncludeComponent(
+	'bitrix:news.list', 
+	'projects', 
+	array(
+		'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+		'ADD_SECTIONS_CHAIN' => 'Y',
+		'AJAX_MODE' => 'N',
+		'AJAX_OPTION_ADDITIONAL' => '',
+		'AJAX_OPTION_HISTORY' => 'N',
+		'AJAX_OPTION_JUMP' => 'N',
+		'AJAX_OPTION_STYLE' => 'Y',
+		'CACHE_FILTER' => 'N',
+		'CACHE_GROUPS' => 'Y',
+		'CACHE_TIME' => '36000000',
+		'CACHE_TYPE' => 'A',
+		'CHECK_DATES' => 'Y',
+		'DETAIL_URL' => '',
+		'DISPLAY_BOTTOM_PAGER' => 'Y',
+		'DISPLAY_DATE' => 'Y',
+		'DISPLAY_NAME' => 'Y',
+		'DISPLAY_PICTURE' => 'Y',
+		'DISPLAY_PREVIEW_TEXT' => 'Y',
+		'DISPLAY_TOP_PAGER' => 'N',
+		'FIELD_CODE' => array(
+			0 => '',
+			1 => '',
+		),
+		'FILTER_NAME' => '',
+		'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
+		'IBLOCK_ID' => '3',
+		'IBLOCK_TYPE' => 'dynamic_content',
+		'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
+		'INCLUDE_SUBSECTIONS' => 'Y',
+		'MESSAGE_404' => '',
+		'NEWS_COUNT' => '8',
+		'PAGER_BASE_LINK_ENABLE' => 'N',
+		'PAGER_DESC_NUMBERING' => 'N',
+		'PAGER_DESC_NUMBERING_CACHE_TIME' => '36000',
+		'PAGER_SHOW_ALL' => 'N',
+		'PAGER_SHOW_ALWAYS' => 'N',
+		'PAGER_TEMPLATE' => '.default',
+		'PAGER_TITLE' => 'Новости',
+		'PARENT_SECTION' => '',
+		'PARENT_SECTION_CODE' => '',
+		'PREVIEW_TRUNCATE_LEN' => '',
+		'PROPERTY_CODE' => array(
+			0 => '',
+			1 => '',
+		),
+		'SET_BROWSER_TITLE' => 'Y',
+		'SET_LAST_MODIFIED' => 'N',
+		'SET_META_DESCRIPTION' => 'Y',
+		'SET_META_KEYWORDS' => 'Y',
+		'SET_STATUS_404' => 'N',
+		'SET_TITLE' => 'Y',
+		'SHOW_404' => 'N',
+		'SORT_BY1' => 'SORT',
+		'SORT_BY2' => 'SORT',
+		'SORT_ORDER1' => 'ASC',
+		'SORT_ORDER2' => 'ASC',
+		'COMPONENT_TEMPLATE' => 'projects'
+	),
+	false
+);?>

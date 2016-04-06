@@ -38,6 +38,22 @@ use Quetzal\Tools\Data\Migration\Bitrix\AbstractIBlockPropertyMigration;
 class AddPropertiesToSMSPromoRequestsIBlockMigration extends AbstractIBlockPropertyMigration
 {
     /**
+     * @var array
+     */
+    protected $properties;
+
+    public function __construct()
+    {
+        $iBlockId = \Quetzal\Environment\EnvironmentManager::getInstance()->get('feedbackBlockId');
+
+        parent::__construct($iBlockId);
+
+        $this->properties = array(
+            'TIME' => 'Удобное время звонка'
+        );
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function up()
@@ -54,6 +70,39 @@ class AddPropertiesToSMSPromoRequestsIBlockMigration extends AbstractIBlockPrope
                 'E-MAIL',
                 'EMAIL'
             );
+
+            foreach ($this->properties as $code => $name) {
+                $arAdditionalFields = array(
+                    'ACTIVE' => 'Y',
+                    'SEARCHABLE' => 'N',
+                    'FILTRABLE' => 'N',
+                    'MULTIPLE' => 'N',
+                );
+
+                $arValues = array(
+                    Array(
+                        "VALUE" => "9.00 – 10.00",
+                        "SORT" => "100",
+                    ),
+                    Array(
+                        "VALUE" => "9.00 – 10.00",
+                        "SORT" => "200",
+                    ),
+                    Array(
+                        "VALUE" => "9.00 – 10.00",
+                        "SORT" => "300",
+                    )
+                );
+
+                $this->createSelectProperty(
+                    $name,
+                    $code,
+                    $arAdditionalFields,
+                    $arValues
+                );
+
+                echo sprintf('Property "%s" has been added', $code) . PHP_EOL;
+            }
 
             $logger->log('Properties have been created successfully');
         } catch (\Quetzal\Exception\Data\Migration\MigrationException $exception) {

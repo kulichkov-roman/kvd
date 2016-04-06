@@ -48,7 +48,7 @@ class CreateHeroSliderIBlockMigration extends AbstractIBlockMigration
                 array(
                     'ACTIVE'           => 'Y',
                     'NAME'             => 'Продукция',
-                    'CODE'             => 'productions',
+                    'CODE'             => 'products',
                     'IBLOCK_TYPE_ID'   => 'dynamic_content',
                     'SITE_ID'          => array('s1'),
                     'SORT'             => 500,
@@ -75,7 +75,7 @@ class CreateHeroSliderIBlockMigration extends AbstractIBlockMigration
 
         $this->deleteIBlock($environment->get('productionsIBlockId'));
 
-        $logger->log(sprintf('IBlock productions has been removed. Id: "%s"', $this->iblockId));
+        $logger->log(sprintf('IBlock products has been removed. Id: "%s"', $this->iblockId));
     }
 }
 

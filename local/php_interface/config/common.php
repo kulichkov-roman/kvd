@@ -6,7 +6,8 @@
 	new \Quetzal\Environment\Configuration\CommonConfiguration(
 		array(
 			'sliderMainIBlockId' => 1,
-			'sliderMainPlugId' => 3,
+			'productsBlockId'    => 3,
+			'sliderMainPlugId'   => 3,
 		)
 	)
 );

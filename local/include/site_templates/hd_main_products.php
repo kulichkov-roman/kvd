@@ -1,154 +1,71 @@
-<section class="products-section">
-			<div id="products" class="wrap">
-				<h2>Продукция</h2>
-				<div class="tabs">
-					<ul class="tabs-caption">
-						<li class="active">Модульное ПВХ-покрытие</li>
-						<li>Полимерные полы</li>
-						<li>Сухие уплотняющие смеси</li>
-					</ul>
-					<div class="tabs-content active">
-						<div class="products-block">
-							<div class="arrow-left"><</div>
-							<div class="products-list">
-								<div class="products-item">
-									<div class="products-item-img">
-										<img src="<?=SITE_TEMPLATE_PATH?>/images/img1.jpg" alt="">
-									</div>
-									<div class="products-item-body">
-										<div class="products-item-title">Sold Flat</div>
-										Новейшее покрытие с особо гладкой поверхностью, не имеющее аналогов на российском
-										рынке. Покрытие специально разработано для помещений, где предъявляются особые
-										требования к обеспыливанию полов (медицинские учреждения, предприятия легкой и
-										пищевой промышленности, высокотехнологичные объекты, научные институты). Высокие
-										показатели износостойкости позволяют использовать
-										его в помещениях любого типа. Выпускается в модулях толщиной 7 мм.
-										<div class="products-item-footer">На каждом крае плитки находится по 12 Т-образных
-											креплений, что делает соединение плиток прочным и надежным.
-											Размер модуля 500x500 мм, таким образом, в квадратном метре напольного покрытия
-											содержится 4 плитки
-										</div>
-									</div>
-								</div>
-								<div class="products-item">
-									<div class="products-item-img">
-										<img src="<?=SITE_TEMPLATE_PATH?>/images/img1.jpg" alt="">
-									</div>
-									<div class="products-item-body">
-										<div class="products-item-title">Sold Flat</div>
-										Новейшее покрытие с особо гладкой поверхностью, не имеющее аналогов на российском
-										рынке. Покрытие специально разработано для помещений, где предъявляются особые
-										требования к обеспыливанию полов (медицинские учреждения, предприятия легкой и
-										пищевой промышленности, высокотехнологичные объекты, научные институты). Высокие
-										показатели износостойкости позволяют использовать
-										его в помещениях любого типа. Выпускается в модулях толщиной 7 мм.
-										<div class="products-item-footer">На каждом крае плитки находится по 12 Т-образных
-											креплений, что делает соединение плиток прочным и надежным.
-											Размер модуля 500x500 мм, таким образом, в квадратном метре напольного покрытия
-											содержится 4 плитки
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="arrow-right">></div>
-							<div class="pager"></div>
-						</div>
-					</div>
-					<div class="tabs-content">
-						<div class="products-block">
-							<div class="arrow-left"><</div>
-							<div class="products-list">
-								<div class="products-item">
-									<div class="products-item-img">
-										<img src="<?=SITE_TEMPLATE_PATH?>/images/img2.jpg" alt="">
-									</div>
-									<div class="products-item-body">
-										<div class="products-item-title">Sold Flat</div>
-										Новейшее покрытие с особо гладкой поверхностью, не имеющее аналогов на российском
-										рынке. Покрытие специально разработано для помещений, где предъявляются особые
-										требования к обеспыливанию полов (медицинские учреждения, предприятия легкой и
-										пищевой промышленности, высокотехнологичные объекты, научные институты). Высокие
-										показатели износостойкости позволяют использовать
-										его в помещениях любого типа. Выпускается в модулях толщиной 7 мм.
-										<div class="products-item-footer">На каждом крае плитки находится по 12 Т-образных
-											креплений, что делает соединение плиток прочным и надежным.
-											Размер модуля 500x500 мм, таким образом, в квадратном метре напольного покрытия
-											содержится 4 плитки
-										</div>
-									</div>
-								</div>
-								<div class="products-item">
-									<div class="products-item-img">
-										<img src="<?=SITE_TEMPLATE_PATH?>/images/img1.jpg" alt="">
-									</div>
-									<div class="products-item-body">
-										<div class="products-item-title">Sold Flat</div>
-										Новейшее покрытие с особо гладкой поверхностью, не имеющее аналогов на российском
-										рынке. Покрытие специально разработано для помещений, где предъявляются особые
-										требования к обеспыливанию полов (медицинские учреждения, предприятия легкой и
-										пищевой промышленности, высокотехнологичные объекты, научные институты). Высокие
-										показатели износостойкости позволяют использовать
-										его в помещениях любого типа. Выпускается в модулях толщиной 7 мм.
-										<div class="products-item-footer">На каждом крае плитки находится по 12 Т-образных
-											креплений, что делает соединение плиток прочным и надежным.
-											Размер модуля 500x500 мм, таким образом, в квадратном метре напольного покрытия
-											содержится 4 плитки
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="arrow-right">></div>
-							<div class="pager"></div>
-						</div>
-					</div>
-					<div class="tabs-content">
-						<div class="products-block">
-							<div class="arrow-left"><</div>
-							<div class="products-list">
-								<div class="products-item">
-									<div class="products-item-img">
-										<img src="<?=SITE_TEMPLATE_PATH?>/images/img2.jpg" alt="">
-									</div>
-									<div class="products-item-body">
-										<div class="products-item-title">Sold Flat</div>
-										Новейшее покрытие с особо гладкой поверхностью, не имеющее аналогов на российском
-										рынке. Покрытие специально разработано для помещений, где предъявляются особые
-										требования к обеспыливанию полов (медицинские учреждения, предприятия легкой и
-										пищевой промышленности, высокотехнологичные объекты, научные институты). Высокие
-										показатели износостойкости позволяют использовать
-										его в помещениях любого типа. Выпускается в модулях толщиной 7 мм.
-										<div class="products-item-footer">На каждом крае плитки находится по 12 Т-образных
-											креплений, что делает соединение плиток прочным и надежным.
-											Размер модуля 500x500 мм, таким образом, в квадратном метре напольного покрытия
-											содержится 4 плитки
-										</div>
-									</div>
-								</div>
-								<div class="products-item">
-									<div class="products-item-img">
-										<img src="<?=SITE_TEMPLATE_PATH?>/images/img3.jpg" alt="">
-									</div>
-									<div class="products-item-body">
-										<div class="products-item-title">Sold Flat</div>
-										Новейшее покрытие с особо гладкой поверхностью, не имеющее аналогов на российском
-										рынке. Покрытие специально разработано для помещений, где предъявляются особые
-										требования к обеспыливанию полов (медицинские учреждения, предприятия легкой и
-										пищевой промышленности, высокотехнологичные объекты, научные институты). Высокие
-										показатели износостойкости позволяют использовать
-										его в помещениях любого типа. Выпускается в модулях толщиной 7 мм.
-										<div class="products-item-footer">На каждом крае плитки находится по 12 Т-образных
-											креплений, что делает соединение плиток прочным и надежным.
-											Размер модуля 500x500 мм, таким образом, в квадратном метре напольного покрытия
-											содержится 4 плитки
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="arrow-right">></div>
-							<div class="pager"></div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</section>
+<?$APPLICATION->IncludeComponent(
+	"your:section.element.group",
+	"products",
+	Array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => ".default",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_SECTION_PICTURE" => "N",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(0=>"",1=>"",),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "2",
+		"IBLOCK_TYPE" => "dynamic_content",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_SUBSECTIONS" => "N",
+		"NEWS_COUNT" => "40",
+		"NEWS_SHOW_SECTION" => "Y",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(0=>"",1=>"",),
+		"SECTION_CHECK_EMPTY" => "N",
+		"SECTION_CHILD" => "N",
+		"SECTION_CNT_ELEMENTS" => "N",
+		"SECTION_COUNT" => "30",
+		"SECTION_DEPTH" => "1",
+		"SECTION_DETAIL_URL" => "",
+		"SECTION_FILTER_NAME" => "",
+		"SECTION_PREVIEW_TRUNCATE_LEN" => "",
+		"SECTION_PROPERTY_CODE" => array(0=>"",1=>"",),
+		"SECTION_SORT_BY1" => "ID",
+		"SECTION_SORT_BY2" => "SORT",
+		"SECTION_SORT_ORDER1" => "DESC",
+		"SECTION_SORT_ORDER2" => "ASC",
+		"SET_BROWSER_TITLE" => "Y",
+		"SET_META_DESCRIPTION" => "Y",
+		"SET_META_KEYWORDS" => "Y",
+		"SET_STATUS_404" => "Y",
+		"SET_TITLE" => "Y",
+		"SORT_BY1" => "ID",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "ASC",
+		"SORT_ORDER2" => "ASC",
+		"TEMP_OUTPUT_ELEMETS" => "element.php",
+		"TEMP_OUTPUT_SECTIONS" => "subSection.php"
+	),
+	false
+);?>

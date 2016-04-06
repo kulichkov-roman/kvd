@@ -92,7 +92,8 @@ IncludeTemplateLangFile(__FILE__);
 				'PATH' => '/local/include/site_templates/hd_main_products.php',
 				'EDIT_TEMPLATE' => ''
 			),
-			false
+			false,
+			Array('HIDE_ICONS' => 'Y')
 		);?>
 		<section class="about-section">
 			<div class="about-arrow"></div>

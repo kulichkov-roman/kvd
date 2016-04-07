@@ -9,6 +9,9 @@
 			'productsBlockId'    => 2,
 			'projectsBlockId'    => 3,
 			'feedbackBlockId'    => 4,
+			'feedbackPropPhoneId'   => 12,
+			'feedbackPropEmailId'   => 13,
+			'feedbackPropTimeId'    => 14,
 			'sliderMainPlugId'   => 3,
 		)
 	)

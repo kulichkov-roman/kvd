@@ -13,6 +13,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 /** @var CBitrixComponent $component */
 $this->setFrameMode(false);
 
+$environment = \Quetzal\Environment\EnvironmentManager::getInstance();
+
 if (!empty($arResult["ERRORS"])) {
 	ShowError(implode("<br />", $arResult["ERRORS"]));
 }
@@ -53,13 +55,13 @@ if (strlen($arResult["MESSAGE"]) > 0) {
 				<div class="col-3">
 					<div class="field">
 						<label for="">Телефон</label>
-						<input name="PROPERTY[4][0]" type="text" class="phone-mask">
+						<input name="PROPERTY[<?=$environment->get('feedbackPropPhoneId')?>][0]" type="text" class="phone-mask">
 					</div>
 				</div>
 				<div class="col-3">
 					<div class="field ">
 						<label for="">Эл.почта</label>
-						<input name="PROPERTY[5][0]" type="text">
+						<input name="PROPERTY[<?=$environment->get('feedbackPropEmailId')?>][0]" type="text">
 					</div>
 				</div>
 			</div>

@@ -62,6 +62,7 @@ if ($eventId) {
                 Имя: #NAME#<br>
                 Email: #EMAIL#<br>
                 Телефон: #PHONE#<br>
+                Удобное время для звонка: #TIME#<br>
             '
         )
     );

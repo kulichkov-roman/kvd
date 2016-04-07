@@ -27,7 +27,7 @@ $APPLICATION->IncludeComponent(
 		"MAX_FILE_SIZE" => "0",
 		"MAX_LEVELS" => "100",
 		"MAX_USER_ENTRIES" => "100",
-		"PREFIX_FORM" => "",
+		"PREFIX_FORM" => "bottom",
 		"PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
 		"PROPERTY_CODES" => array(
 			0 => $environment->get('feedbackPropPhoneId'),
@@ -49,4 +49,4 @@ $APPLICATION->IncludeComponent(
 		"COMPONENT_TEMPLATE" => "feedback_bottom"
 	),
 	false
-); ?>
+);?>

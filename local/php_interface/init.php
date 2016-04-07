@@ -15,20 +15,4 @@ foreach ($environment->getConfigFileNames() as $fileName) {
 }
 
 AddEventHandler('main', 'OnEpilog', array('RequestHandler', 'Show404IfNeeded'));
-
-AddEventHandler('iblock', 'OnAfterIBlockElementAdd', 'SendingEmailHandler', 100);
-
-function SendingEmailHandler(&$arFields)
-{
-	$environment = \Quetzal\Environment\EnvironmentManager::getInstance();
-
-	if ($arFields['IBLOCK_ID'] == $environment->get('feedbackBlockId')) {
-		$arEventFields = array(
-			'NAME' => $arFields['NAME'],
-			'PHONE' => $arFields['PROPERTY_VALUES'][$environment->get('feedbackPropPhoneId')],
-			'EMAIL' => $arFields['PROPERTY_VALUES'][$environment->get('feedbackPropEmailId')],
-			'TIME'  => $arFields['PROPERTY_VALUES'][$environment->get('feedbackPropTimeId')],
-		);
-		CEvent::Send('FEEDBACK_SENT', SITE_ID, $arEventFields);
-	}
-}
+AddEventHandler('iblock', 'OnAfterIBlockElementAdd', array('SendingEmailHandler', 'SendFeedbackForm'));

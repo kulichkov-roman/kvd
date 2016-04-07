@@ -13,6 +13,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 /** @var CBitrixComponent $component */
 $this->setFrameMode(false);
 
+$environment = \Quetzal\Environment\EnvironmentManager::getInstance();
+
 if (!empty($arResult["ERRORS"])) {
 	ShowError(implode("<br />", $arResult["ERRORS"]));
 }
@@ -35,7 +37,6 @@ if (strlen($arResult["MESSAGE"]) > 0) {
 	<?
 }
 ?>
-
 <section class="callback-section">
 	<form name="iblock_add" action="<?=POST_FORM_ACTION_URI?>" method="post" enctype="multipart/form-data">
 		<?=bitrix_sessid_post()?>
@@ -51,19 +52,26 @@ if (strlen($arResult["MESSAGE"]) > 0) {
 			</div>
 			<div class="field field-inline">
 				<label for="">Телефон</label>
-				<input name="PROPERTY[4][0]" type="text" class="phone-mask">
+				<input name="PROPERTY[<?=$environment->get('feedbackPropPhoneId')?>][0]" type="text" class="phone-mask">
 			</div>
-			<div class="field-select field-inline">
-				<label for="">Удобное время для звонка</label>
-				<select name="PROPERTY[6][0]">
-					<option value="">9.00 – 10.00</option>
-					<option value="">9.00 – 10.00</option>
-					<option value="">9.00 – 10.00</option>
-					<option value="">9.00 – 10.00</option>
-				</select>
-			</div>
+			<?
+			if(sizeof($arResult['PROPERTY_LIST_FULL'][$environment->get('feedbackPropTimeId')]['ENUM']))
+			{
+				?>
+				<div class="field-select field-inline">
+					<label for="">Удобное время для звонка</label>
+					<select name="PROPERTY[<?=$environment->get('feedbackPropTimeId')?>]">
+						<?foreach($arResult['PROPERTY_LIST_FULL'][$environment->get('feedbackPropTimeId')]['ENUM'] as $arItem){?>
+							<option value="<?=$arItem['ID']?>"><?=$arItem['VALUE']?></option>
+						<?}?>
+					</select>
+				</div>
+				<?
+			}
+			?>
 			<div class="field-btn field-inline">
 				<input type="submit" name="<?=$arParams['PREFIX_FORM']?>_iblock_submit" value="Позвоните мне" />
 			</div>
 		</div>
+	</form>
 </section>

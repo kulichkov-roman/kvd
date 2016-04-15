@@ -576,15 +576,10 @@ label {
 .about-section:before {
   content: '';
   width: 100%;
-  height: 77px;
+  height: 78px;
   position: absolute;
   top: 0;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-  background: url("../images/separator-type2.png") repeat-x;
+  background: url("../images/separator-type3.png") repeat-x;
   z-index: 1;
 }
 .about-section:after {
@@ -623,15 +618,10 @@ label {
 .projects-section:before {
   content: '';
   width: 100%;
-  height: 77px;
+  height: 78px;
   position: absolute;
   top: 0;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-  background: url("../images/separator-type2.png") repeat-x;
+  background: url("../images/separator-type3.png") repeat-x;
   z-index: 1;
 }
 .projects-section:after {
@@ -980,15 +970,10 @@ label {
 .reviews-section:before {
   content: '';
   width: 100%;
-  height: 77px;
+  height: 78px;
   position: absolute;
   top: 0;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-  background: url("../images/separator-type2.png") repeat-x;
+  background: url("../images/separator-type3.png") repeat-x;
   z-index: 1;
 }
 .reviews-section:after {

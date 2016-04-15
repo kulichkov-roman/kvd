@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 
 <section class="projects-section">
-	<div class="wrap">
+	<div id="projects" class="wrap">
 		<h2>РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</h2>
 		<div class="projects-block">
 			<?$index = 1;?>

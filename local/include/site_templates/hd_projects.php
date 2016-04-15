@@ -1,6 +1,6 @@
 <?$APPLICATION->IncludeComponent(
 	'bitrix:news.list', 
-	'projects', 
+	'projects-main',
 	array(
 		'ACTIVE_DATE_FORMAT' => 'd.m.Y',
 		'ADD_SECTIONS_CHAIN' => 'Y',

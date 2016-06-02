@@ -80,7 +80,7 @@ $(window).load(function () {
         margin: 0,
         nav: 'dots',
         fit: 'cover',
-        autoplay: 10000,
+        autoplay: 20000,
         arrows: false,
         transition: 'dissolve'
     });

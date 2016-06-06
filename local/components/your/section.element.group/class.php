@@ -1,23 +1,23 @@
 <?php
 /**
-* 
-* @author dev2fun (darkfriend)
-* @copyright darkfriend
-* @version 0.1.3
-* 
-*/
+ *
+ * @author dev2fun (darkfriend)
+ * @copyright darkfriend
+ * @version 0.1.3
+ *
+ */
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
 class Dev2funListElements extends CBitrixComponent {
-	
+
 	private $type;
-	
+
 	/**
-	* 
-	* @param array $arrSections
-	* 
-	* @return array is not section empty
-	*/
+	 *
+	 * @param array $arrSections
+	 *
+	 * @return array is not section empty
+	 */
 	public final function checkSectionOnEmpty($arrSections){
 		if(empty($arrSections)) return false;
 		foreach($arrSections as $keySection=>$arrSection){
@@ -29,16 +29,16 @@ class Dev2funListElements extends CBitrixComponent {
 	}
 
 	/**
-	* Метод возвращает массив с целочисленными id
-	* @param array $arRequestParams - запрос<br>
-	* 		arSort - массив сортировки
-	* 		arFilter - массив фильтров
-	* 		arNavParams - массив навигации
-	* 		arSelect - массив возвращаемых данных
-	* @param array $arParams - параметры компонента
-	* 
-	* @return array|false
-	*/
+	 * РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°СЃСЃРёРІ СЃ С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹РјРё id
+	 * @param array $arRequestParams - Р·Р°РїСЂРѕСЃ<br>
+	 * 		arSort - РјР°СЃСЃРёРІ СЃРѕСЂС‚РёСЂРѕРІРєРё
+	 * 		arFilter - РјР°СЃСЃРёРІ С„РёР»СЊС‚СЂРѕРІ
+	 * 		arNavParams - РјР°СЃСЃРёРІ РЅР°РІРёРіР°С†РёРё
+	 * 		arSelect - РјР°СЃСЃРёРІ РІРѕР·РІСЂР°С‰Р°РµРјС‹С… РґР°РЅРЅС‹С…
+	 * @param array $arParams - РїР°СЂР°РјРµС‚СЂС‹ РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 *
+	 * @return array|false
+	 */
 	public function getElementsSection($arRequestParams,$arParams){
 		$result = array();
 		if($arParams['NEWS_SHOW_SECTION']=='N') return $result;
@@ -47,7 +47,7 @@ class Dev2funListElements extends CBitrixComponent {
 		}
 		// $arResult["ELEMENTS"] = array();
 		// $arFilter['SECTION_ID'] = intval($arSection["ID"]);
-		
+
 //			$arFilter["INCLUDE_SUBSECTIONS"] = "Y";
 		$obParser = new CTextParser;
 		$rsElement = CIBlockElement::GetList(
@@ -61,14 +61,14 @@ class Dev2funListElements extends CBitrixComponent {
 		while($obElement = $rsElement->GetNextElement())
 		{
 			$arItem = $obElement->GetFields();
-			
+
 			$arButtons = CIBlock::GetPanelButtons(
 				$arItem["IBLOCK_ID"],
 				$arItem["ID"],
 				0,
 				array("SECTION_BUTTONS"=>false, "SESSID"=>false)
 			);
-			
+
 			$arItem["EDIT_LINK"] = $arButtons["edit"]["edit_element"]["ACTION_URL"];
 			$arItem["DELETE_LINK"] = $arButtons["edit"]["delete_element"]["ACTION_URL"];
 
@@ -118,7 +118,7 @@ class Dev2funListElements extends CBitrixComponent {
 			if($bGetProperty)
 				$arItem["PROPERTIES"] = $obElement->GetProperties();
 			$arItem["DISPLAY_PROPERTIES"]=array();
-			
+
 			if($arParams["PROPERTY_CODE"]=='ALL'){
 				foreach($arItem["PROPERTIES"] as $pid=>$prop){
 					$arItem["DISPLAY_PROPERTIES"][$pid] = CIBlockFormatProperties::GetDisplayValue($arItem, $prop, "news_out");
@@ -140,17 +140,17 @@ class Dev2funListElements extends CBitrixComponent {
 
 		return $result;
 	}
-	
+
 	public function setType($type){
 		$this->type = $type;
 	}
-	
+
 	/**
-	* Метод возвращает массив с целочисленными id
-	* @param array $arraySections
-	* 
-	* @return array|false
-	*/
+	 * РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°СЃСЃРёРІ СЃ С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹РјРё id
+	 * @param array $arraySections
+	 *
+	 * @return array|false
+	 */
 	public final function GetArraySectionsID($arraySections){
 		if(empty($arraySections)) return false;
 		for($i=0,$cnt=count($arraySections);$i<$cnt;$i++){
@@ -169,18 +169,18 @@ class Dev2funListElements extends CBitrixComponent {
 		}
 		return $arraySections;
 	}
-	
+
 	public final function GetArraySectionInfo(){
-		
+
 	}
-	
+
 	/**
-	* 
-	* @param array $item массив раздела
-	* @param string|integer $tools DEPTH_LEVEL(int, уровень вложенности)|prev(string, ближайший родитель)|main_prev(string, главный родитель)
-	* 
-	* @return array
-	*/
+	 *
+	 * @param array $item РјР°СЃСЃРёРІ СЂР°Р·РґРµР»Р°
+	 * @param string|integer $tools DEPTH_LEVEL(int, СѓСЂРѕРІРµРЅСЊ РІР»РѕР¶РµРЅРЅРѕСЃС‚Рё)|prev(string, Р±Р»РёР¶Р°Р№С€РёР№ СЂРѕРґРёС‚РµР»СЊ)|main_prev(string, РіР»Р°РІРЅС‹Р№ СЂРѕРґРёС‚РµР»СЊ)
+	 *
+	 * @return array
+	 */
 	public final function getParentSectionArray($item,$tools='prev',$arRequestParams=array(),$arParams=array()){
 		if(!$item['IBLOCK_SECTION_ID']) return false;
 		$res = CIBlockSection::GetByID($item['IBLOCK_SECTION_ID']);
@@ -199,7 +199,7 @@ class Dev2funListElements extends CBitrixComponent {
 			switch($tools){
 				case 'prev' : break;
 				case 'main_prev' : $ar_res=$this->getParentSectionArray($ar_res['IBLOCK_SECTION_ID'], $tools); break;
-				default : 
+				default :
 					if($ar_res['DEPTH_LEVEL']!==$tools){
 						$ar_res=$this->getParentSectionArray($ar_res['IBLOCK_SECTION_ID'], $tools);
 					}
@@ -209,23 +209,23 @@ class Dev2funListElements extends CBitrixComponent {
 	}
 
 	/**
-	* Пересобирает массив, группируя по необхомым ключам
-	* 
-	* @param array $arrItems
-	* @param string $pathGroupKeys путь до группирующего значения
-	* 
-	* @return array сгруппированный
-	*/
+	 * РџРµСЂРµСЃРѕР±РёСЂР°РµС‚ РјР°СЃСЃРёРІ, РіСЂСѓРїРїРёСЂСѓСЏ РїРѕ РЅРµРѕР±С…РѕРјС‹Рј РєР»СЋС‡Р°Рј
+	 *
+	 * @param array $arrItems
+	 * @param string $pathGroupKeys РїСѓС‚СЊ РґРѕ РіСЂСѓРїРїРёСЂСѓСЋС‰РµРіРѕ Р·РЅР°С‡РµРЅРёСЏ
+	 *
+	 * @return array СЃРіСЂСѓРїРїРёСЂРѕРІР°РЅРЅС‹Р№
+	 */
 	public final function conditionResultArray($arrItems, $pathGroupKeys='SECTION_RESULT/ID'){
-		
+
 		$result = array();
 		$groupPath = explode('/',$pathGroupKeys);
-		
+
 		foreach($arrItems as $key=>$item){
 			$thisKey = $key==0 ? 0 : count($result)-1;
 
 			$ifs = $this->recResultArray($item,$groupPath,$result[$thisKey][0]);
-			
+
 			if($ifs){
 				$result[$thisKey] = $item;
 			} else {
@@ -234,28 +234,28 @@ class Dev2funListElements extends CBitrixComponent {
 		}
 		return $result;
 	}
-	
+
 	/**
-	* Проверяет текущий элемент на наличие группирующего ключа и сравнивает значения с тем что уже объединенно
-	* 
-	* @param array $item
-	* @param array $groupPath
-	* @param array|null $arrRes
-	* @param integer|null $step
-	* 
-	* @return true|false
-	*/
+	 * РџСЂРѕРІРµСЂСЏРµС‚ С‚РµРєСѓС‰РёР№ СЌР»РµРјРµРЅС‚ РЅР° РЅР°Р»РёС‡РёРµ РіСЂСѓРїРїРёСЂСѓСЋС‰РµРіРѕ РєР»СЋС‡Р° Рё СЃСЂР°РІРЅРёРІР°РµС‚ Р·РЅР°С‡РµРЅРёСЏ СЃ С‚РµРј С‡С‚Рѕ СѓР¶Рµ РѕР±СЉРµРґРёРЅРµРЅРЅРѕ
+	 *
+	 * @param array $item
+	 * @param array $groupPath
+	 * @param array|null $arrRes
+	 * @param integer|null $step
+	 *
+	 * @return true|false
+	 */
 	private function recResultArray($item,$groupPath,$arrRes,$step){
 		if(!$arrRes) return false;
 		$result = false;
 
 		if(is_array($item)){
 			foreach($item as $key=>$val){
-				
+
 				if(!$step && $step!==0){
 					$step = 0;
 				}
-				
+
 				if($this->recReturnKeyGroup($key,$groupPath,$step)){
 					if(is_array($val)){
 						$ifs2 = $this->recResultArray($val,$groupPath,$arrRes,$step+1);
@@ -272,38 +272,38 @@ class Dev2funListElements extends CBitrixComponent {
 		}
 		return $result;
 	}
-	
+
 	/**
-	* Проверяет наличие ключа в путях из ключей
-	* 
-	* @param string $key
-	* @param array|string $groupPath
-	* @param integer $step
-	* 
-	* @return string|false
-	*/
+	 * РџСЂРѕРІРµСЂСЏРµС‚ РЅР°Р»РёС‡РёРµ РєР»СЋС‡Р° РІ РїСѓС‚СЏС… РёР· РєР»СЋС‡РµР№
+	 *
+	 * @param string $key
+	 * @param array|string $groupPath
+	 * @param integer $step
+	 *
+	 * @return string|false
+	 */
 	private function recReturnKeyGroup($key,$groupPath,$step=0){
-		
+
 		if(is_array($groupPath)){
 			$groupPath=$this->recReturnKeyGroup($key,$groupPath[$step]);
-		} 
-		
+		}
+
 		if($key==$groupPath){
 			return $key;
 		}
-		
+
 		return false;
 	}
-	
+
 	/**
-	* Возвращает значение результирующего массива, учитывая путь из ключей
-	* 
-	* @param array $arrRes
-	* @param array $groupPath
-	* @param integer $key
-	* 
-	* @return string значение в результирующем массиве
-	*/
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РµРіРѕ РјР°СЃСЃРёРІР°, СѓС‡РёС‚С‹РІР°СЏ РїСѓС‚СЊ РёР· РєР»СЋС‡РµР№
+	 *
+	 * @param array $arrRes
+	 * @param array $groupPath
+	 * @param integer $key
+	 *
+	 * @return string Р·РЅР°С‡РµРЅРёРµ РІ СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РµРј РјР°СЃСЃРёРІРµ
+	 */
 	private function recReturnValueArResult($arrRes,$groupPath,$key=0){
 		if(is_array($groupPath)){
 			if(is_array($arrRes[$groupPath[$key]])){
@@ -316,7 +316,7 @@ class Dev2funListElements extends CBitrixComponent {
 		}
 		return $res;
 	}
-	
+
 	public function render($arAllResult, $arParams, $templateFile=null)
 	{
 		if(!$templateFile) {
@@ -337,8 +337,8 @@ class Dev2funListElements extends CBitrixComponent {
 	}
 
 	/**
-	 * Вывод данных
-	 * @param array $params массив параметров
+	 * Р’С‹РІРѕРґ РґР°РЅРЅС‹С…
+	 * @param array $params РјР°СЃСЃРёРІ РїР°СЂР°РјРµС‚СЂРѕРІ
 	 */
 	public function recRender($params)
 	{
@@ -362,10 +362,10 @@ class Dev2funListElements extends CBitrixComponent {
 	}
 
 	/**
-	 * Выводит все данные
-	 * @param string $tempPath пусть до файла
-	 * @param array $arResult массив выводимых данных
-	 * @param string $keyName глобальная переменная
+	 * Р’С‹РІРѕРґРёС‚ РІСЃРµ РґР°РЅРЅС‹Рµ
+	 * @param string $tempPath РїСѓСЃС‚СЊ РґРѕ С„Р°Р№Р»Р°
+	 * @param array $arResult РјР°СЃСЃРёРІ РІС‹РІРѕРґРёРјС‹С… РґР°РЅРЅС‹С…
+	 * @param string $keyName РіР»РѕР±Р°Р»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ
 	 */
 	public function ob($tempPath, $arResult, $keyName = 'arResult'){
 		if(!file_exists($tempPath)) {
